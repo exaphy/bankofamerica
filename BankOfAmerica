@@ -1,0 +1,160 @@
+import SwiftUI
+
+struct BankOfAmerica: View {
+    @State private var search = ""
+    
+    var body: some View {
+        VStack {
+            Group {
+                VStack {
+                    HStack {
+                        Image(systemName: "bell")
+                        Spacer()
+                        Spacer()
+                        Image(systemName: "questionmark.circle")
+                            .offset(x: 10)
+                        Spacer()
+                        Image(systemName: "cart")
+                            .padding()
+                        Image(systemName: "pip.exit")
+                    }
+                    .padding()
+                    .foregroundColor(.red)
+                    .font(.title3)
+                    
+                    HStack {
+                        VStack {
+                            Text("ACCOUNTS")
+                        }
+                        Spacer()
+                        Text("DASHBOARD")
+                    }
+                    .padding(.horizontal, 40)
+                    .foregroundColor(.red)
+                    
+                    Rectangle()
+                        .frame(width: 200, height: 2)
+                        .foregroundColor(.red)
+                        .offset(x: -92)
+                }
+            }
+            .background(.white)
+            .clipShape(Rectangle())
+            
+            VStack {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Welcome Andy")
+                            .foregroundColor(.blue)
+                            .fontWeight(.bold)
+                            .padding()
+                        Rectangle()
+                            .frame(height: 0.5)
+                            .foregroundColor(.gray)
+                        
+                        HStack {
+                            Image(systemName: "arrow.up.right.circle")
+                                .foregroundColor(.black) 
+                                .font(.title2)
+                            
+                            VStack(alignment: .leading) {
+                                Text("Bank of America Life Plan")
+                                    .font(.headline)
+                                    .foregroundColor(.blue)
+                                Text("Turn your dreams into an action plan")
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                        .padding()
+                        
+                        Rectangle()
+                            .frame(height: 0.5)
+                            .foregroundColor(.gray)
+                        
+                        HStack {
+                            Image(systemName: "arrow.up.right.circle")
+                                .foregroundColor(.black) 
+                                .font(.title2)
+                            
+                            VStack(alignment: .leading) {
+                                Text("My Rewards")
+                                    .font(.headline)
+                                    .foregroundColor(.blue)
+                                Text("Platinum Rewards Member")
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                        .padding()
+                    }
+                    .background(.white) 
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .padding()
+                    Spacer()
+                }
+                
+                VStack {
+                    HStack {
+                        Text("Bank of America")
+                            .padding()
+                            .background(.red) 
+                            .clipShape(Rectangle())
+                            .font(.title2)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Checking Account -7994")
+                                .foregroundColor(.gray)
+                            Text("$84,821.63")
+                                .font(.title2).bold()
+                                .foregroundColor(.black)
+                        } 
+                        Spacer()
+                        
+                        Text("VIEW")
+                            .padding(.horizontal)
+                            .padding(.vertical, 5)
+                            .foregroundColor(.blue)
+                            .background(.gray.opacity(0.1))
+                            .clipShape(Rectangle())
+                    }
+                    .padding()
+                    
+                    Rectangle()
+                        .frame(height: 0.5)
+                        .foregroundColor(.gray)
+                    
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Savings Account -2908")
+                                .foregroundColor(.gray)
+                            Text("$23,532.28")
+                                .font(.title2).bold()
+                                .foregroundColor(.black)
+                        } 
+                        Spacer()
+                        
+                        Text("VIEW")
+                            .padding(.horizontal)
+                            .padding(.vertical, 5)
+                            .foregroundColor(.blue)
+                            .background(.gray.opacity(0.1))
+                            .clipShape(Rectangle())
+                    }
+                    .padding()
+                }
+                .background(.white) 
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .padding()
+            }
+            .background(.gray.opacity(0.1))
+            .clipShape(Rectangle())
+            .ignoresSafeArea()
+            Spacer()
+        }
+        .preferredColorScheme(.light)
+    }
+}
