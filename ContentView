@@ -1,0 +1,37 @@
+import SwiftUI
+
+struct ContentView: View {
+    
+    var body: some View {
+        NavigationView {
+            TabView {
+                BankOfAmerica()
+                    .tabItem {
+                        Label("Accounts", systemImage: "dollarsign.circle")
+                    }
+                    .toolbarBackground(Color.gray.opacity(0.1), for: .tabBar)
+                    .toolbarBackground(.visible, for: .tabBar)
+                
+                AdditionalView()
+                    .tabItem {
+                        Label("Transfer / Zelle", systemImage: "dollarsign")
+                    }
+                
+                AdditionalView()
+                    .tabItem {
+                        Label("Bill Pay", systemImage: "dollarsign.arrow.circlepath")
+                    }
+                
+                AdditionalView()
+                    .tabItem {
+                        Label("Deposit Checks", systemImage: "checkmark")
+                    }
+                
+                AdditionalView()
+                    .tabItem {
+                        Label("Menu", systemImage: "filemenu.and.cursorarrow")
+                    }
+            }
+        }
+    }
+}
